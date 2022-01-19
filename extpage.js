@@ -94,7 +94,7 @@ function faFilterShowWindow() {
     checkbox.type = 'checkbox';
     if(i != 0 && i != 3)
       checkbox.checked = true;
-    checkbox.id = partName.replaceAll(' ', '-');
+    checkbox.id = partName.replaceAll(' ', '-').replace(/[^a-zA-Z0-9-]/g, '');
     checkbox.className = 'part-checkbox';
     childDiv.appendChild(checkbox);
     childDiv.appendChild(span);
